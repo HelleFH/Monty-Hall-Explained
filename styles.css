@@ -71,25 +71,25 @@ main {
   }
   
   .btn.simulate {
-    border-color: #CB6CE6;
-    color: #fff;
-    box-shadow: 0 0 40px 40px #CB6CE6 inset, 0 0 0 0 #CB6CE6;
+    border-color: #F06C9C;
+    color: rebeccapurple;
+    box-shadow: 0 0 40px 40px #F06C9C inset, 0 0 0 0 #F06C9C;
     transition: all 150ms ease-in-out;
   }
   
   .btn.play {
-    border-color: #38B6FF;
-    color: #fff;
-    box-shadow: 0 0 40px 40px #38B6FF inset, 0 0 0 0 #38B6FF;
+    border-color: #ACF06C;
+    color: rebeccapurple;
+    box-shadow: 0 0 40px 40px #ACF06C inset, 0 0 0 0 #ACF06C;
     transition: all 150ms ease-in-out;
   }
   
   .btn.simulate:hover {
-    box-shadow: 0 0 10px 0 #CB6CE6 inset, 0 0 10px 4px#CB6CE6;
+    box-shadow: 0 0 10px 0 #F06C9C inset, 0 0 10px 4px#F06C9C;
   }
   
   .btn.play:hover {
-    box-shadow: 0 0 10px 0 #38B6FF inset, 0 0 10px 4px #38B6FF;
+    box-shadow: 0 0 10px 0 #ACF06C inset, 0 0 10px 4px #ACF06C;
   }
   
   .section {
