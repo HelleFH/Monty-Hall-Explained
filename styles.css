@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&display=swap");
 :root {
   --translate-value: -40;
 }
@@ -6,6 +7,7 @@
 html {
   box-sizing: border-box;
   cursor: default;
+  font-family: "Roboto";
 }
 
 *,
@@ -14,11 +16,19 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  /* Smoothing */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 body {
   background-color: rgba(246, 248, 249, 0.7);
-  color: #3d3d3d;
+  color: #1f1f1f;
 }
 
 img {
@@ -289,6 +299,14 @@ img {
 }
 .btn.play:hover {
   box-shadow: 0 0 10px 0 #acf06c inset, 0 0 10px 4px #acf06c;
+}
+
+.math-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */
