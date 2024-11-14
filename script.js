@@ -88,48 +88,33 @@ showQuotes(quotes1, "quote-container-1");
     showQuotes(quotes2, "quote-container-2");
 });
 
+gsap.registerPlugin(ScrollTrigger);
 
-    // Register ScrollTrigger plugin with GSAP
-    gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray(".revealUp").forEach(function (elem) {
+    ScrollTrigger.create({
+        trigger: elem,
+        start: "top 80%",
+        end: "bottom 20%",
+        markers: false,
+        onEnter: function () {
+            // Check if it's a mobile or tablet screen
+            const isMobile = window.innerWidth <= 768; // Adjust the max width as needed
+            const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024; // Optional: for tablets
 
-    // REVEAL //
-    gsap.utils.toArray(".revealUp").forEach(function (elem) {
-        ScrollTrigger.create({
-            trigger: elem,
-            start: "top 80%",
-            end: "bottom 20%",
-            markers: false,
-            onEnter: function () {
-                gsap.fromTo(
-                    elem,
-                    { y: 100, autoAlpha: 0 },
-                    {
-                        duration: 1.25,
-                        y: 0,
-                        autoAlpha: 1,
-                        ease: "back",
-                        overwrite: "auto"
-                    }
-                );
-            },
-            onLeave: function () {
-                gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-            },
-            onEnterBack: function () {
-                gsap.fromTo(
-                    elem,
-                    { y: -100, autoAlpha: 0 },
-                    {
-                        duration: 1.25,
-                        y: 0,
-                        autoAlpha: 1,
-                        ease: "back",
-                        overwrite: "auto"
-                    }
-                );
-            },
-            onLeaveBack: function () {
-                gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-            }
-        });
+            // Adjust animation duration based on screen size
+            const duration = isMobile ? 0.8 : 1.25; // Faster animation on mobile
+
+            gsap.fromTo(
+                elem,
+                { y: 100, autoAlpha: 0 },
+                {
+                    duration: duration,  // Dynamic duration based on screen size
+                    y: 0,
+                    autoAlpha: 1,
+                    ease: "back",
+                    overwrite: "auto"
+                }
+            );
+        }
     });
+});
