@@ -219,10 +219,9 @@ img {
 }
 .quote-section-container {
   position: absolute;
-  margin-top: 2em;
-  height: 50vh;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
+  margin-top: 2em;
 }
 .quote-section-item {
   font-family: "Special Elite";
@@ -315,11 +314,6 @@ img {
 }
 
 @media (max-width: 1200px) {
-  .sections-container {
-    width: 96vw;
-    margin: 0 auto;
-    margin-top: 40vh;
-  }
   .header-title {
     font-size: 8vw;
   }
@@ -341,7 +335,7 @@ img {
   .section-content-text-callout {
     font-weight: 500;
     margin-bottom: 20px;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .magazine-section {
     flex-direction: column;
@@ -366,32 +360,32 @@ img {
   }
   .quote-section-item {
     line-height: 1em;
-    font-size: 1.1em;
+    font-size: 0.8em;
     max-width: 250px;
     min-width: 150px;
     padding: 1.5em;
   }
   .header {
-    height: 60vh;
+    height: 60%;
     background-size: contain;
     background-repeat: repeat;
     transform: none;
   }
   .header-inner {
     height: 50%;
-    top: 100px;
+    top: 150px;
   }
   .header-title {
     font-size: 8vw;
   }
   .header-subtitle {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .section-content {
     padding: 1.5em;
   }
   .section {
-    margin-top: 0vh;
+    margin-top: 50vh;
   }
   .game-section div {
     flex-direction: column;
@@ -425,7 +419,7 @@ img {
     padding: 0;
   }
   .header-subtitle {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
   .game-section img {
     width: 100%;

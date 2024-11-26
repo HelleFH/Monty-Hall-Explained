@@ -300,7 +300,9 @@
     });
 
 </script>
-<script>document.addEventListener("DOMContentLoaded", function () {
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
         const quotes1 = [
             { text: "You made a mistake, but look at the positive side. If all those Ph.D.'s were wrong, the country would be in serious trouble.", author: "Dr. E. Ray Bobo, Georgetown University" },
             { text: "May I suggest that you obtain and refer to a standard textbook on probability before you try to answer a question of this type again?", author: "Charles Reid, Ph.D., University of Florida" },
@@ -336,42 +338,35 @@
             function isTablet() {
                 return window.innerWidth <= 1000 && window.innerWidth > 768; // Tablet breakpoint
             }
+           
+           
+           
             function showNextQuote() {
-                if (currentQuoteIndex < quotes.length) {
-                    const quoteElement = document.createElement("div");
-                    quoteElement.classList.add("quote-section-item");
+    if (currentQuoteIndex < quotes.length) {
+        const quoteElement = document.createElement("div");
+        quoteElement.classList.add("quote-section-item");
 
-                    let topPosition, leftPosition;
-                    const containerWidth = quoteContainer.clientWidth;
-                    const containerHeight = quoteContainer.clientHeight;
+        const containerWidth = quoteContainer.clientWidth;
+        const containerHeight = quoteContainer.clientHeight;
 
-                    if (isMobile()) {
-                        // Restrict to 90% of container width and height
-                        topPosition = getRandomNumber(0, containerHeight - 150);
-                        leftPosition = getRandomNumber(0, containerWidth - containerWidth * 0.9); // Prevent overflow on mobile
-                    } else if (isTablet()) {
-                        topPosition = getRandomNumber(0, containerHeight - 250);
-                        leftPosition = getRandomNumber(0, containerWidth - containerWidth * 0.8); // Allow more space on tablets
-                    } else {
-                        topPosition = getRandomNumber(0, containerHeight - 350);
-                        leftPosition = getRandomNumber(0, containerWidth - containerWidth * 0.75); // For desktop, allow more flexibility
-                    }
+        const topPosition = getRandomNumber(0, containerHeight * 0.8); // Restrict to 80% of height
+        const leftPosition = getRandomNumber(0, containerWidth * 0.8); // Restrict to 80% of width
 
-                    quoteElement.style.top = `${topPosition}px`;
-                    quoteElement.style.left = `${leftPosition}px`;
-                    quoteElement.style.zIndex = currentZIndex++;
-                    quoteElement.innerHTML = `
+        quoteElement.style.top = `${topPosition}px`;
+        quoteElement.style.left = `${leftPosition}px`;
+        quoteElement.style.zIndex = currentZIndex++;
+        quoteElement.innerHTML = `
             <div class="quote-overlay"></div>
             <div class="blockquote">"${quotes[currentQuoteIndex].text}"</div>
             <div class="cite">${quotes[currentQuoteIndex].author}</div>
         `;
 
-                    quoteContainer.appendChild(quoteElement);
+        quoteContainer.appendChild(quoteElement);
 
-                    gsap.to(quoteElement, { opacity: 1, y: 0, duration: 1, delay: currentQuoteIndex * 0.5 });
-                    currentQuoteIndex++;
-                }
-            }
+        gsap.to(quoteElement, { opacity: 1, y: 0, duration: 1, delay: currentQuoteIndex * 0.5 });
+        currentQuoteIndex++;
+    }
+}
             gsap.to(window, {
                 scrollTrigger: {
                     trigger: `#${containerId}`,

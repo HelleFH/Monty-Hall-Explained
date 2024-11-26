@@ -219,9 +219,10 @@ img {
 
   &-container {
     position: absolute;
-    width: 100%;
-    margin: 0 auto;
     margin-top: 2em;
+    height:50vh;
+    width:100vw;
+    margin:0 auto;
   }
 
   &-item {
@@ -333,6 +334,12 @@ img {
 }
 
 @media (max-width: 1200px) {
+
+  .sections-container {
+    width: 96vw;
+    margin: 0 auto;
+    margin-top:40vh;
+  }
   .header-title {
     font-size: 8vw;
   }
@@ -361,7 +368,7 @@ img {
         &-callout {
           font-weight: 500;
           margin-bottom: 20px;
-          font-size: 1.1rem;
+          font-size: 1rem;
         }
       }
     }
@@ -400,7 +407,7 @@ img {
   .quote-section {
     &-item {
       line-height: 1em;
-      font-size: 0.8em;
+      font-size: 1.1em;
       max-width: 250px;
       min-width: 150px;
       padding: 1.5em;
@@ -408,14 +415,14 @@ img {
   }
 
   .header {
-    height: 60%;
+    height: 60vh;
     background-size: contain;
     background-repeat: repeat;
     transform: none;
 
     &-inner {
       height: 50%;
-      top: 150px;
+      top: 100px;
     }
   }
 
@@ -424,14 +431,14 @@ img {
   }
 
   .header-subtitle {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .section-content {
     padding: 1.5em;
   }
 
   .section {
-    margin-top: 50vh;
+    margin-top: 0vh;
   }
 
   .game-section div {
@@ -471,7 +478,7 @@ img {
   }
 
   .header-subtitle {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 
   .game-section img {
