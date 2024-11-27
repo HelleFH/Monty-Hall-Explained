@@ -88,6 +88,8 @@ img {
   margin: 0 auto;
 }
 .section {
+  z-index:99;
+
   margin-top: 101vh;
   padding: 5em;
   background-color: rgb(246, 248, 249, 0.99);
@@ -216,13 +218,16 @@ img {
   background-position: top center;
   margin-bottom: 3em;
   margin-top: 3em;
+  padding-bottom:5em;
+
 
   &-container {
     position: absolute;
     margin-top: 2em;
-    height:50vh;
-    width:100vw;
+    width:80vw;
     margin:0 auto;
+    z-index:9999;
+
   }
 
   &-item {
@@ -248,6 +253,7 @@ img {
   &-item.active {
     opacity: 1;
     transform: translateY(0);
+
   }
 
   .quote-overlay {
@@ -485,9 +491,6 @@ img {
     width: 100%;
   }
 
-  .quote-section {
-    min-height: 50vh;
-  }
 
   .btn {
     padding: 1em 2em;

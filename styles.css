@@ -90,6 +90,7 @@ img {
 }
 
 .section {
+  z-index: 99;
   margin-top: 101vh;
   padding: 5em;
   background-color: rgba(246, 248, 249, 0.99);
@@ -216,13 +217,14 @@ img {
   background-position: top center;
   margin-bottom: 3em;
   margin-top: 3em;
+  padding-bottom: 5em;
 }
 .quote-section-container {
   position: absolute;
   margin-top: 2em;
-  height: 50vh;
-  width: 100vw;
+  width: 80vw;
   margin: 0 auto;
+  z-index: 9999;
 }
 .quote-section-item {
   font-family: "Special Elite";
@@ -429,9 +431,6 @@ img {
   }
   .game-section img {
     width: 100%;
-  }
-  .quote-section {
-    min-height: 50vh;
   }
   .btn {
     padding: 1em 2em;
