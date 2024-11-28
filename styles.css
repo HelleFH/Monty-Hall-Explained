@@ -32,12 +32,14 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .header {
   height: 200%;
-  background-image: url("background.webp");
+  background-image: url("/assets/images/background.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -117,7 +119,7 @@ img {
   margin-top: 12px;
 }
 .section-content-side img {
-  max-width: 500px;
+  max-width: 800px;
   transition: 1.5s cubic-bezier(0.22, 0.44, 0, 1) 0.4s;
 }
 .section-content-side:before {
@@ -235,7 +237,7 @@ img {
   max-width: 300px;
   min-width: 200px;
   padding: 1.5em;
-  background-image: url(quote-bg.svg);
+  background-image: url(/assets/images/quote-bg.svg);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
