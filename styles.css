@@ -92,7 +92,7 @@ p {
   max-width: 300px;
   min-width: 200px;
   padding: 1.5em;
-  background-image: url(/assets/images/quote-bg.svg);
+  background-color: white;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -166,35 +166,45 @@ p {
 }
 
 @media (max-width: 768px) {
+  .quote-section-item {
+    line-height: 1em;
+    font-size: 1.1em;
+    max-width: 250px;
+    min-width: 150px;
+    padding: 1.5em;
+  }
   .quote-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
+    margin-top: 3em;
     padding-bottom: 5em;
   }
   .quote-section-container {
     position: absolute;
-    width: 95vw;
+    margin-top: 2em;
+    width: 80vw;
     margin: 0 auto;
     z-index: 9999;
-    max-height: 200px;
   }
   .quote-section-item {
     font-family: "Special Elite";
     font-style: italic;
     line-height: 1em;
-    font-size: 0.8em !important;
+    font-size: 1em;
     position: absolute;
-    padding: 1em;
-    background-image: url(/assets/images/quote-bg.svg);
+    max-width: 300px;
+    min-width: 200px;
+    padding: 1.5em;
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -217,7 +227,7 @@ p {
     opacity: 1;
   }
   .quote-section {
-    max-height: 40vh;
+    min-height: 60vh;
   }
 }
 
