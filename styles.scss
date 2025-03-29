@@ -189,20 +189,72 @@ font-size:1.1rem;}
 
 @media (max-width: 768px) {
 
+
+
   .quote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin-bottom: 4em;
+    padding-bottom: 5em;
+  
+  
+    &-container {
+      position: absolute;
+      width: 95vw;
+      margin: 0 auto;
+      z-index: 9999;
+      max-height:200px;
+
+  
+    }
+  
     &-item {
+      font-family: "Special Elite";
+      font-style: italic;
       line-height: 1em;
-      font-size: 1.1em;
-      max-width: 250px;
-      min-width: 150px;
-      padding: 1.5em;
+      font-size: 0.8em !important;
+      position: absolute;
+      padding: 1em;
+      background-image: url(/assets/images/quote-bg.svg);
+      opacity: 0;
+      transform: translateY(10px);
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    &-item.active {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+  
+    .quote-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  
+    &-item.active .quote-overlay {
+      opacity: 1;
     }
   }
-
-
-
+  
 
   .quote-section {
-    min-height: 60vh;
+    max-height: 40vh;
   }
 }

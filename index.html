@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     onEnter: () => {
                         showNextQuote();
                         for (let i = 1; i < quotes.length; i++) {
-                            setTimeout(showNextQuote, i * 1500);
+                            setTimeout(showNextQuote, i * 2000);
                         }
                     }
                 }
