@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const quoteData1 = showNextQuote(container1, quotes1, currentIndex1, quoteOffset1, quotes1Array);
             currentIndex1 = quoteData1.index;
             quoteOffset1 = quoteData1.offset;
-        }, 2500); // Control interval between showing quotes for Quotes 1
+        }, 3000); // Control interval between showing quotes for Quotes 1
     }
 
     // Start Quotes 2 when it's fully in view
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const quoteData2 = showNextQuote(container2, quotes2, currentIndex2, quoteOffset2, quotes2Array);
                 currentIndex2 = quoteData2.index;
                 quoteOffset2 = quoteData2.offset;
-            }, 2500); // Control interval between showing quotes for Quotes 2
+            }, 3000); // Control interval between showing quotes for Quotes 2
             quotes2Started = true; // Set the flag to true so Quotes 2 doesn't start again
         }
     }

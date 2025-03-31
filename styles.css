@@ -54,7 +54,6 @@ img {
 
 p {
   font-family: "roboto";
-  font-size: 1.1rem;
 }
 
 .play-buttons {
@@ -79,7 +78,7 @@ section {
 
 .section-divider {
   border-top: 2px solid #ddd;
-  margin: 5rem 0;
+  margin: 30px 0;
 }
 
 .mb-5 {
@@ -98,7 +97,7 @@ section {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.2rem;
+  font-size: 1rem;
   max-width: 90%;
   background: #fff;
   padding: 15px 20px;
@@ -113,7 +112,7 @@ section {
 
 .quote p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #333;
 }
 
@@ -126,10 +125,6 @@ section {
   font-weight: bold;
   font-size: 0.9rem;
   color: #007bff;
-}
-
-.comment-text {
-  font-size: 0.95rem;
 }
 
 .btn {
@@ -171,6 +166,21 @@ section {
 }
 .btn.play:hover {
   box-shadow: 0 0 10px 0 #acf06c inset, 0 0 10px 4px #acf06c;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .quote-section-container {
+    height: 50vh;
+  }
+  .quote {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-top: 3rem;
+  }
+  .quote p {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

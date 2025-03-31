@@ -30,14 +30,16 @@ html {
 ul {
   list-style: none;
 }
-.header {  background-image: url("/assets/images/background.webp");
-  background-size:90%;
+
+.header {
+  background-image: url("/assets/images/background.webp");
+  background-size: 90%;
   background-repeat: no-repeat;
   background-position: center 20%;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
-  color:#f4f4f4;
-  padding:4rem;
+  color: #f4f4f4;
+  padding: 4rem;
 }
 
 body {
@@ -51,9 +53,9 @@ img {
   margin: 0 auto;
 }
 
-p {font-family:"roboto";
-font-size:1.1rem;}
-
+p {
+  font-family: "roboto";
+}
 
 
 .play-buttons {
@@ -97,7 +99,7 @@ section {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.2rem;
+  font-size: 1rem;
   max-width: 90%;
   background: #fff;
   padding: 15px 20px;
@@ -112,11 +114,9 @@ section {
 
 .quote p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #333;
 }
-
-
 
 .comment-meta {
   display: flex;
@@ -129,9 +129,6 @@ section {
   color: #007bff;
 }
 
-.comment-text {
-  font-size: 0.95rem;
-}
 
 .btn {
   font-family: "Roboto";
@@ -187,3 +184,19 @@ section {
   }
 }
 
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .quote-section-container {
+    height: 50vh;
+  }
+
+  .quote {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-top: 3rem;
+  }
+
+  .quote p {
+    font-size: 1rem;
+  }
+}
