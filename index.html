@@ -22,18 +22,21 @@
         <div class="container py-5">
             <div class="header-inner text-center mb-5">
                 <h1 class="header-title mt-5">THE MONTY HALL PROBLEM</h1>
-                <h2 class="header-subtitle">
-                    The Monty Hall problem, named after the host of the American television game show "Let's Make a
-                    Deal,"
-                    has captivated mathematicians, statisticians, and enthusiasts since it emerged. Despite its apparent
-                    simplicity, this probability puzzle defies intuition and challenges our understanding of chances.
-                </h2>
+                <p class="lead mt-3">
+                    A probability puzzle that defies intuition and continues to baffle minds around the world.
+                </p>
+               
             </div>
         </div>
     </header>
     <div class="wrapper">
         <section class="sections-container mb-5 mt-5">
-       
+            <h2 class="header-subtitle text-center mb-5">
+                The Monty Hall problem, named after the host of the American television game show "Let's Make a
+                Deal,"
+                has captivated mathematicians, statisticians, and enthusiasts since it emerged. Despite its apparent
+                simplicity, this probability puzzle defies intuition and challenges our understanding of chances.
+            </h2>
         
             <div class="text-center">
                 <h3>Here's how the gameshow went down:</h3>
@@ -199,27 +202,29 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const quotes1 = [
-        { text: "You made a mistake, but look at the positive side. If all those Ph.D.'s were wrong, the country would be in serious trouble.", author: "Dr. E. Ray Bobo, Georgetown University" },
-        { text: "May I suggest that you obtain and refer to a standard textbook on probability before you try to answer a question of this type again?", author: "Charles Reid, Ph.D., University of Florida" },
-        { text: "How many irate mathematicians are needed to change your mind?", author: "E. Ray Bobo, Ph.D., University of Texas" },
-        { text: "If you publish this, you will have a thousand Ph.D.'s writing in to tell you that you are wrong.", author: "Don Edwards, Ph.D., University of Georgia" },
-        { text: "I'm very concerned with the general public’s lack of mathematical skills. Please help by confessing your error and in the future being more careful.", author: "Charles Reid, Ph.D., University of Florida" },
-        { text: "You are the goat! You made a mistake, but look at the positive side. If all those Ph.D.'s were wrong, the country would be in serious trouble.", author: "Dr. George Kolata, Department of Mathematics, Oberlin College" },
-        { text: "I am in shock that after being corrected by at least three mathematicians, you still do not see your mistake.", author: "Kent Ford, Ph.D., Dickinson State University" },
-        { text: "You are utterly incorrect. How many irate mathematicians are needed to change your mind?", author: "Barry Pasternack, Ph.D., California State University" },
-        { text: "Your answer to the Monty Hall problem is in error and is a clear illustration of the dangers of knowledge without understanding.", author: "B.A. Nelson, Ph.D., Morgan State University" },
-        { text: "If all those Ph.D.'s were wrong, the country would be in serious trouble. You blew it, and you blew it big!", author: "S. Schlain, Ph.D., Wayne State University" }
-    ];
+    { text: "You made a mistake, but look at the positive side. If all those Ph.D.'s were wrong, the country would be in serious trouble.", name: "Dr. E. Ray Bobo", profession: "Georgetown University" },
+    { text: "May I suggest that you obtain and refer to a standard textbook on probability before you try to answer a question of this type again?", name: "Charles Reid, Ph.D.", profession: "University of Florida" },
+    { text: "How many irate mathematicians are needed to change your mind?", name: "E. Ray Bobo, Ph.D.", profession: "University of Texas" },
+    { text: "If you publish this, you will have a thousand Ph.D.'s writing in to tell you that you are wrong.", name: "Don Edwards, Ph.D.", profession: "University of Georgia" },
+    { text: "I'm very concerned with the general public’s lack of mathematical skills. Please help by confessing your error and in the future being more careful.", name: "Charles Reid, Ph.D.", profession: "University of Florida" },
+    { text: "You are the goat! You made a mistake, but look at the positive side. If all those Ph.D.'s were wrong, the country would be in serious trouble.", name: "Dr. George Kolata", profession: "Department of Mathematics, Oberlin College" },
+    { text: "I am in shock that after being corrected by at least three mathematicians, you still do not see your mistake.", name: "Kent Ford, Ph.D.", profession: "Dickinson State University" },
+    { text: "You are utterly incorrect. How many irate mathematicians are needed to change your mind?", name: "Barry Pasternack, Ph.D.", profession: "California State University" },
+    { text: "Your answer to the Monty Hall problem is in error and is a clear illustration of the dangers of knowledge without understanding.", name: "B.A. Nelson, Ph.D.", profession: "Morgan State University" },
+    { text: "If all those Ph.D.'s were wrong, the country would be in serious trouble. You blew it, and you blew it big!", name: "S. Schlain, Ph.D.", profession: "Wayne State University" }
+];
 
-    const quotes2 = [
-        { text: "After careful consideration and multiple simulations, it’s clear that switching doors is the better option.", author: "Robert Sachs, Ph.D., George Mason University" },
-        { text: "You are indeed correct. After performing numerous simulations, I can confirm that switching doors increases the odds of winning to 2/3.", author: "Lawrence S. Brash, Ph.D., University of Southern California" },
-        { text: "I apologize for my initial criticism. Your logic and explanation are sound. Switching doors is the better strategy.", author: "Earl D. Sacerdote, Ph.D., Mathematics Professor, Massachusetts Institute of Technology" },
-        { text: "My students and I conducted the Monty Hall experiment, and the results consistently showed that switching is indeed the best strategy.", author: "George Brant, Mathematics Instructor, Boston University" },
-        { text: "I ran computer simulations and found that the probability of winning when switching is indeed 2/3.", author: "David H. Ropeik, Consultant, Risk Perception and Communication" },
-        { text: "Having reconsidered my initial reaction, I now see that your explanation is mathematically accurate. I apologize for my earlier comments.", author: "Robert W. Tufts, Ph.D., Professor of Mathematics, Columbia University" },
-        { text: "You have done a great service by clarifying this counterintuitive problem for the general public.", author: "John M. Obrien, Professor of Statistics, University of Chicago" }
-    ];
+
+const quotes2 = [
+    { text: "After careful consideration and multiple simulations, it’s clear that switching doors is the better option.", name: "Robert Sachs, Ph.D.", profession: "George Mason University" },
+    { text: "You are indeed correct. After performing numerous simulations, I can confirm that switching doors increases the odds of winning to 2/3.", name: "Lawrence S. Brash, Ph.D.", profession: "University of Southern California" },
+    { text: "I apologize for my initial criticism. Your logic and explanation are sound. Switching doors is the better strategy.", name: "Earl D. Sacerdote, Ph.D.", profession: "Mathematics Professor, Massachusetts Institute of Technology" },
+    { text: "My students and I conducted the Monty Hall experiment, and the results consistently showed that switching is indeed the best strategy.", name: "George Brant", profession: "Mathematics Instructor, Boston University" },
+    { text: "I ran computer simulations and found that the probability of winning when switching is indeed 2/3.", name: "David H. Ropeik", profession: "Consultant, Risk Perception and Communication" },
+    { text: "Having reconsidered my initial reaction, I now see that your explanation is mathematically accurate. I apologize for my earlier comments.", name: "Robert W. Tufts, Ph.D.", profession: "Professor of Mathematics, Columbia University" },
+    { text: "You have done a great service by clarifying this counterintuitive problem for the general public.", name: "John M. Obrien", profession: "Professor of Statistics, University of Chicago" }
+];
+
 
     const container1 = document.getElementById("quote-container-1");
     const container2 = document.getElementById("quote-container-2");
@@ -241,7 +246,9 @@ document.addEventListener("DOMContentLoaded", function () {
         quoteDiv.classList.add("quote");
         quoteDiv.innerHTML = `
             <div class="comment-meta">
-                <div class="comment-name">${quoteData.author}</div>
+                <div class="comment-name">${quoteData.name}</div>
+                <div class="comment-profession">${quoteData.profession}</div>
+
                 <div class="comment-text">"${quoteData.text}"</div>
             </div>
         `;
@@ -293,14 +300,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Set up Intersection Observer to start Quotes 2 when container2 is in view
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                startQuotes2(); // Start Quotes 2 when the section is in view
-            }
-        });
-    }, { threshold: 1.0 }); // Trigger when the entire container is in view
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startQuotes2();
+        }
+    });
+}, {
+    threshold: 0, // Trigger as soon as any part is visible
+    rootMargin: '0px 0px -100px 0px' // Adjust this value as needed
+});
+
 
     observer.observe(container2); // Start observing the Quotes 2 container
 
