@@ -196,8 +196,9 @@ section {
     font-size: 1rem;
     padding: 10px 15px;
     margin-top: 3rem;
-    max-width: 98vw;
+    max-width: 96vw;
     margin: 0 auto;
+    transform: translateX(-40%);
   }
   .comment-profession {
     display: none;
