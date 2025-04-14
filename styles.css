@@ -186,6 +186,9 @@ section {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
+  .header {
+    padding: 2rem;
+  }
   .wrapper {
     width: 98vw;
   }
