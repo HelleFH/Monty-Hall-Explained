@@ -86,10 +86,15 @@ ul {
 
 section {
   background-color: #f8f9fa;
-  padding: 30px;
+  padding: 1rem;
   margin-bottom: 30px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-image {
+  width: 100vw;
+  margin: 0 auto;
 }
 
 .section-divider {
@@ -107,7 +112,7 @@ section {
   background-position: center 5%;
   overflow: hidden;
   background-repeat: cover;
-  z-index:1;
+  z-index: 1;
 }
 
 .quote {
@@ -124,7 +129,7 @@ section {
   align-items: center;
   opacity: 0;
   margin-top: 4rem;
-  z-index:9999;
+  z-index: 9999;
 }
 
 .quote p {
@@ -138,7 +143,8 @@ section {
   flex-direction: column;
 }
 
-.comment-name,   .comment-profession {
+.comment-name,
+.comment-profession {
   font-weight: bold;
   font-size: 0.9rem;
   color: #007bff;
@@ -201,12 +207,18 @@ section {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
-
+  .header-subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    padding: 0;
+    text-align: left !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
 
   .header {
-    padding:2rem;
+    padding: 2rem;
   }
-  
+
   .wrapper {
     width: 98vw;
   }
@@ -215,22 +227,25 @@ section {
     font-size: 1rem;
     padding: 10px 15px;
     margin-top: 3rem;
-    max-width:96vw;
-    margin:0 auto;
+    max-width: 96vw;
+    margin: 0 auto;
     transform: translateX(-40%);
 
   }
 
-  .comment-profession {display:none;}
+  .comment-profession {
+    display: none;
+  }
 
   .quote p {
     font-size: 1rem;
   }
+
   .comment-meta {
     display: flex;
     flex-direction: row;
-    min-width:300px;
-    gap:0.4rem  
+    min-width: 300px;
+    gap: 0.4rem
   }
-  
+
 }
