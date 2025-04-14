@@ -215,9 +215,19 @@ section {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
+  h1 {
+    font-size: 3rem;
+    text-align: left !important;
+
+  }
+
   .header {
     padding: 2rem;
+    p {    text-align: left !important;
+    }
+
   }
+
 
   .wrapper {
     width: 98vw;
